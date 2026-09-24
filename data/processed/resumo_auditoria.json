@@ -1,0 +1,27 @@
+{
+  "cobertura": {
+    "inicio": "2015-01",
+    "fim": "2025-11",
+    "municipios": 62,
+    "linhas": 8122
+  },
+  "internacoes": 186529,
+  "focos_2015_2025_ano_completo": 162838,
+  "correlacao_municipio_mes": 0.0117357410958339,
+  "random_forest_teste": {
+    "MAE": 25.43444599850906,
+    "RMSE": 37.47973255136999,
+    "R2": 0.0839075545074889
+  },
+  "regressao_linear_teste": {
+    "MAE": 25.454781679930782,
+    "RMSE": 37.72515893362648,
+    "R2": 0.0718706817389047
+  },
+  "baseline_teste": {
+    "MAE": 25.647388931869333,
+    "RMSE": 38.15043650253597,
+    "R2": 0.05082703879761297
+  },
+  "sensibilidade_agosto_novembro_rho_lag0": 0.3237491190979563
+}
