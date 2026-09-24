@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queimadas e internações respiratórias no Amazonas</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:1100px;margin:0 auto;padding:28px;color:#202124;background:#fff}h1{margin-bottom:4px}.sub{color:#5f6368}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.card{border:1px solid #ddd;border-radius:10px;padding:16px;text-align:center}.card strong{display:block;font-size:1.6rem;margin-bottom:5px}.panel{border:1px solid #ddd;border-radius:10px;padding:18px;margin:18px 0}.note{background:#f6f7f8;padding:14px 16px;border-radius:8px}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #ddd;text-align:right}th:first-child,td:first-child{text-align:left}@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>Queimadas, clima e internações respiratórias no Amazonas</h1>
+<p class="sub">62 municípios · janeiro/2015 a novembro/2025 · 8.122 observações município–mês</p>
+<div class="grid">
+<div class="card"><strong>186.529</strong>internações J00–J99</div>
+<div class="card"><strong>162.838</strong>focos 2015–2025</div>
+<div class="card"><strong>0,012</strong>Spearman município–mês</div>
+<div class="card"><strong>0,084</strong>melhor R² no teste</div>
+</div>
+<div class="note"><strong>Leitura principal:</strong> a contagem mensal municipal de focos não apresentou relação simples nem ganho preditivo robusto para explicar as internações respiratórias. Isso não implica ausência de efeitos da fumaça; contagem de focos é uma proxy limitada de exposição humana.</div>
+<div class="panel">
+<h2>Modelos — teste temporal 2024–2025</h2>
+<table><thead><tr><th>Modelo</th><th>MAE</th><th>RMSE</th><th>R²</th></tr></thead><tbody>
+<tr><td>Regressão Linear</td><td>25,45</td><td>37,73</td><td>0,072</td></tr>
+<tr><td>Random Forest</td><td>25,43</td><td>37,48</td><td>0,084</td></tr>
+<tr><td>Baseline município × mês</td><td>25,65</td><td>38,15</td><td>0,051</td></tr>
+</tbody></table>
+</div>
+<div class="panel"><h2>Sazonalidade e sensibilidade</h2><p>85,7% dos focos do painel ocorreram entre agosto e novembro. A correlação contemporânea restrita a agosto–novembro foi ρ = 0,324, enquanto a correlação município–mês no painel completo foi praticamente nula. O contraste evidencia a importância da estrutura sazonal.</p></div>
+<div class="panel"><h2>Arquivos</h2><p>Resultados detalhados: <a href="../docs/resultados.md">docs/resultados.md</a> · Conclusões: <a href="../docs/conclusoes.md">docs/conclusoes.md</a> · Metodologia: <a href="../docs/metodologia.md">docs/metodologia.md</a></p><p>O dashboard interativo completo e os PNGs são regenerados por <code>python run_pipeline.py</code>.</p></div>
+</body>
+</html>
