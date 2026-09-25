@@ -2,6 +2,17 @@
 
 Projeto de análise de dados desenvolvido a partir de um briefing de portfólio EBAC/Semantix.
 
+## Entrega final
+
+- 📄 [Relatório final consolidado em PDF](Relatorio_Final_Queimadas_Internacoes_Amazonas.pdf)
+- 📊 [Dashboard de resultados](visualizations/dashboard_resultados.html)
+- 📈 [Resultados detalhados](docs/resultados.md)
+- ✅ [Conclusões](docs/conclusoes.md)
+- 🧪 [Metodologia e modelagem](docs/modelagem.md)
+- 🗂️ [Coleta de dados](docs/coleta.md)
+
+O PDF consolida os tópicos solicitados na atividade — **coleta de dados, modelagem e conclusões** — e o restante do repositório mantém o código e os resultados reproduzíveis.
+
 ## Pergunta
 
 Existe associação entre focos de queimadas, condições meteorológicas e internações por doenças do aparelho respiratório entre residentes dos municípios do Amazonas?
@@ -26,20 +37,20 @@ Isso não significa que fumaça de queimadas seja inofensiva. Significa que **co
 
 ## Principais números
 
-- internações J00–J99 no painel: **186,529**;
-- focos na série anual completa 2015–2025: **162,838**;
-- pico anual de focos: **25,499 em 2024**;
-- correlação Spearman município–mês entre focos e taxa: **0.012**;
-- melhor R² no teste temporal: **0.084** — Random Forest;
-- R² do baseline sazonal: **0.051**.
+- internações J00–J99 no painel: **186.529**;
+- focos na série anual completa 2015–2025: **162.838**;
+- pico anual de focos: **25.499 em 2024**;
+- correlação Spearman município–mês entre focos e taxa: **0,012**;
+- melhor R² no teste temporal: **0,084** — Random Forest;
+- R² do baseline sazonal: **0,051**.
 
 ## Modelos
 
 | Modelo | MAE | RMSE | R² — teste 2024–2025 |
 |---|---:|---:|---:|
-| Regressão Linear | 25.45 | 37.73 | 0.072 |
-| Random Forest | 25.43 | 37.48 | 0.084 |
-| Baseline município × mês | 25.65 | 38.15 | 0.051 |
+| Regressão Linear | 25,45 | 37,73 | 0,072 |
+| Random Forest | 25,43 | 37,48 | 0,084 |
+| Baseline município × mês | 25,65 | 38,15 | 0,051 |
 
 ## Estrutura
 
@@ -149,3 +160,5 @@ Foco de queimadas é uma medida de detecção térmica, não uma medida de conce
 ## Reprodutibilidade
 
 Os resultados do repositório foram gerados a partir das fontes públicas descritas em `docs/coleta.md`. O código interrompe a execução quando identifica lacunas internas na série de saúde ou divergência material na validação do INPE.
+
+O PDF final também pode ser regenerado pelo workflow do GitHub Actions a partir de `scripts/build_pdf_report.py`.
